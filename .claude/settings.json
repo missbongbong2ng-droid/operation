@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(start \"\" \"d:\\\\AI\\\\s\\\\마스터 스탭_규정_가이드.html\")",
-      "Bash(git mv *)"
+      "Bash(git mv *)",
+      "Bash(command -v gh)",
+      "Bash(gh --version)",
+      "WebFetch(domain:staff-guide-red.vercel.app)",
+      "Bash(curl -s -o /dev/null -w \"HTTP Status: %{http_code}\\\\n\" \"https://staff-guide-red.vercel.app/staff-regulation-guide.html\")",
+      "Bash(awk 'NR==363{print length\\($0\\)}' \"d:/AI/s/index.html\")",
+      "Bash(awk 'NR>=363 && NR<=395 && length\\($0\\)<500' \"d:/AI/s/index.html\")"
     ]
   }
 }

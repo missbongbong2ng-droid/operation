@@ -362,6 +362,42 @@
 </head>
 <body>
 
+<div id="password-gate" style="position:fixed;inset:0;z-index:9999;background:#1B1B2A;display:flex;align-items:center;justify-content:center;">
+  <form id="password-form" style="background:#fff;padding:32px 28px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.25);max-width:320px;width:90%;text-align:center;font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;">
+    <div style="font-size:15px;font-weight:600;color:#37352F;margin-bottom:14px;">비밀번호를 입력해주세요</div>
+    <input type="password" id="password-input" inputmode="numeric" autocomplete="off" style="width:100%;padding:10px 12px;font-size:15px;border:1px solid #DEDEDC;border-radius:6px;text-align:center;letter-spacing:2px;box-sizing:border-box;">
+    <div id="password-error" style="color:#C4554D;font-size:12px;margin-top:8px;display:none;">비밀번호가 올바르지 않습니다.</div>
+    <button type="submit" style="margin-top:14px;width:100%;padding:10px;background:#37352F;color:#fff;border:none;border-radius:6px;font-size:14px;cursor:pointer;">확인</button>
+  </form>
+</div>
+<script>
+(function(){
+  var CORRECT = "4885";
+  var gate = document.getElementById('password-gate');
+  if(localStorage.getItem('staffGuideAuthed') === '1'){
+    gate.style.display = 'none';
+  } else {
+    document.body.style.overflow = 'hidden';
+    var form = document.getElementById('password-form');
+    var input = document.getElementById('password-input');
+    var error = document.getElementById('password-error');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if(input.value === CORRECT){
+        localStorage.setItem('staffGuideAuthed', '1');
+        gate.style.display = 'none';
+        document.body.style.overflow = '';
+      } else {
+        error.style.display = 'block';
+        input.value = '';
+        input.focus();
+      }
+    });
+    setTimeout(function(){ input.focus(); }, 50);
+  }
+})();
+</script>
+
 <div id="progress"></div>
 
 <div id="topnav">
@@ -421,6 +457,12 @@
             <div class="prop-key">✅ 현장 출석 체크</div>
             <div class="prop-val">당일 <b>오전 9시 정각까지</b> 현장 도착, 직출 <span style="color:var(--red-text); font-style:normal; font-weight:700;"><br>(지각 절대 불가)</span></div>
           </div>
+           <div class="prop-row">
+            <div class="prop-key">🧑🏻‍🦱 현장 위치 및 역할</div>
+            <div class="prop-val"><b>증명사진부스</b> : 이수현(책임마스터), 양인희사원<br>
+              <b>이력서생성부스</b> : 권여진(책임마스터), 김상호책임<br>
+              <b>총괄 책임자</b> : 김화영 선임 (전체 인력 및 부스 상황 총괄) <span style="color:var(--red-text); font-style:normal; font-weight:700;"><br>(질서를 위한 체계, 동일한 업무 실시)</span></div>
+          </div>
         </div>
       </div>
     </details>
@@ -437,7 +479,7 @@
       </summary>
       <div class="sec-body">
         <p style="font-size:14.5px; color:var(--text-2); margin-top:0;">방문객들에게 신뢰감을 주고, 스탭 간의 통일성을 위해 아래 복장 규정을 적용합니다.</p>
->>>>>>>>
+
         <div class="prop-table">
           <div class="prop-row">
             <div class="prop-key">👕 상의</div>

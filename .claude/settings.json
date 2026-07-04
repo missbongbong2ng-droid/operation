@@ -8,7 +8,22 @@
       "WebFetch(domain:staff-guide-red.vercel.app)",
       "Bash(curl -s -o /dev/null -w \"HTTP Status: %{http_code}\\\\n\" \"https://staff-guide-red.vercel.app/staff-regulation-guide.html\")",
       "Bash(awk 'NR==363{print length\\($0\\)}' \"d:/AI/s/index.html\")",
-      "Bash(awk 'NR>=363 && NR<=395 && length\\($0\\)<500' \"d:/AI/s/index.html\")"
+      "Bash(awk 'NR>=363 && NR<=395 && length\\($0\\)<500' \"d:/AI/s/index.html\")",
+      "Bash(awk 'NR>=401 && NR<=425' \"d:/AI/s/index.html\")",
+      "Bash(awk 'NR>=265 && NR<=295' \"d:/AI/s/staff-regulation-guide.html\")",
+      "Bash(awk 'NR>=401 && NR<=440 && length\\($0\\)<300' \"d:/AI/s/index.html\")",
+      "Bash(awk 'NR>=265 && NR<=305 && length\\($0\\)<300' \"d:/AI/s/staff-regulation-guide.html\")",
+      "Bash(awk 'NR>=401 && NR<=415{printf \"%d:%s\\\\n\", NR, $0}' \"d:/AI/s/index.html\")",
+      "Bash(awk 'NR>=403 && NR<=425{ if\\(length\\($0\\)>300\\) print NR\": [huge line omitted, len=\"length\\($0\\)\"]\"; else print NR\": \"$0 }' \"d:/AI/s/index.html\")",
+      "Bash(awk 'NR>=269 && NR<=285{ if\\(length\\($0\\)>300\\) print NR\": [huge line omitted, len=\"length\\($0\\)\"]\"; else print NR\": \"$0 }' \"d:/AI/s/staff-regulation-guide.html\")",
+      "Bash(sed -i '403,413d' index.html)",
+      "Bash(sed -i '269,278d' staff-regulation-guide.html)",
+      "Bash(awk 'NR>=398 && NR<=406{ if\\(length\\($0\\)>300\\) print NR\": [huge line, len=\"length\\($0\\)\"]\"; else print NR\": \"$0 }' \"d:/AI/s/index.html\")",
+      "Bash(awk 'NR>=264 && NR<=272{ if\\(length\\($0\\)>300\\) print NR\": [huge line, len=\"length\\($0\\)\"]\"; else print NR\": \"$0 }' \"d:/AI/s/staff-regulation-guide.html\")",
+      "Bash(awk 'NR>=42 && NR<=60' \"d:/AI/s/index.html\")",
+      "Bash(awk 'NR>=335 && NR<=342' \"d:/AI/s/index.html\")",
+      "Bash(awk 'NR>=246 && NR<=253' \"d:/AI/s/staff-regulation-guide.html\")",
+      "Bash(awk 'NR>=40 && NR<=60' \"d:/AI/s/staff-regulation-guide.html\")"
     ]
   }
 }

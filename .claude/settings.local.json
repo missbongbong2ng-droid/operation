@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk '{ if \\(length\\($0\\) > 5000\\) print NR, length\\($0\\) }' \"스탭_규정_가이드.html\")",
+      "Bash(awk 'NR==253{print substr\\($0,1,200\\)} NR==264{print substr\\($0,1,200\\)} NR==269{print substr\\($0,1,200\\)} NR==444{print substr\\($0,1,200\\)}' \"스탭_규정_가이드.html\")",
+      "Bash(awk 'NR>=248 && NR<=272 {print NR\": \"substr\\($0,1,100\\)}' \"스탭_규정_가이드.html\")",
+      "Bash(start \"\" \"d:\\\\AI\\\\s\\\\스탭_규정_가이드.html\")",
+      "Bash(start \"\" \"d:\\\\AI\\\\s\\\\마스터 스탭_규정_가이드.html\")"
+    ]
+  }
+}

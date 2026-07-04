@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(start \"\" \"d:\\\\AI\\\\s\\\\마스터 스탭_규정_가이드.html\")"
+      "Bash(start \"\" \"d:\\\\AI\\\\s\\\\마스터 스탭_규정_가이드.html\")",
+      "Bash(git mv *)"
     ]
   }
 }

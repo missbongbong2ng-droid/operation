@@ -218,7 +218,7 @@
   .stat-row{ display:flex; flex-wrap:wrap; gap:8px; margin:2px 0 18px; }
 
   /* ---------- master / staffing cards ---------- */
-  .cards2{ display:grid; grid-template-columns:1.4fr 1fr; gap:16px; margin-bottom:22px; align-items:start; }
+  .cards2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:22px; align-items:start; }
   @media (max-width:760px){ .cards2{ grid-template-columns:1fr; } }
   .info-card{
     border:1px solid var(--border); border-radius:10px; padding:16px 18px; background:var(--page);
@@ -702,7 +702,7 @@
                 <td class="cat">합계</td>
                 <td class="center">16대</td>
                 <td class="center">6</td>
-                <td>현장 상주 인력 총 7명 (교대 조 편성 필요 시 추가 고려)</td>
+                <td>현장 변동 가능성 있음</td>
                 <td class="center" colspan="3">총책 김화영</td>
               </tr>
             </tbody>
@@ -759,6 +759,31 @@
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <h3 class="sub-title">3) 휴식시간 일반스태프 배정 조</h3>
+        <div class="callout info">
+          <span class="ic">ℹ️</span>
+          <div>휴식 교대 시 세션 공백이 없도록 이력서 생성 · 증명사진 생성 베이직 인원을 2개 조로 혼합 배정</div>
+        </div>
+
+        <div class="cards2">
+          <div class="info-card">
+            <div class="info-title">🧑‍🤝‍🧑 1조</div>
+            <ul>
+              <li><span class="name">이민아</span><span class="val">이력서 생성</span></li>
+              <li><span class="name">정현아</span><span class="val">이력서 생성</span></li>
+              <li><span class="name">김성경</span><span class="val">증명사진 생성</span></li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="info-title">🧑‍🤝‍🧑 2조</div>
+            <ul>
+              <li><span class="name">이지은</span><span class="val">이력서 생성</span></li>
+              <li><span class="name">장유리</span><span class="val">이력서 생성</span></li>
+              <li><span class="name">김한결</span><span class="val">증명사진 생성</span></li>
+            </ul>
+          </div>
         </div>
 
       </div>

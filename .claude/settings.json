@@ -48,7 +48,8 @@
       "Bash(perl -v)",
       "Bash(perl -i -pe ' *)",
       "Bash(perl -i -ne 'if\\($prev_b64 && /^\\\\s*$/\\){$prev_b64=0; next} print; $prev_b64 = \\(/base64/\\) ? 1 : 0;' main.html)",
-      "Bash(awk 'NR>=275 && NR<=290 { if\\(length\\($0\\)>300\\){print NR\": [LONG LINE len=\"length\\($0\\)\"]\"} else {print NR\": \"$0} }' main.html)"
+      "Bash(awk 'NR>=275 && NR<=290 { if\\(length\\($0\\)>300\\){print NR\": [LONG LINE len=\"length\\($0\\)\"]\"} else {print NR\": \"$0} }' main.html)",
+      "Bash(start \"\" \"d:\\\\AI\\\\s\\\\main.html\")"
     ]
   }
 }

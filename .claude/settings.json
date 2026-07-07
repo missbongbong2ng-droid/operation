@@ -42,7 +42,13 @@
       "Bash(python3 -c \"print\\(1\\)\")",
       "Bash(python -c \"print\\(1\\)\")",
       "Read(//c/Users/missb/AppData/Local/Temp/claude/d--AI-s/16ea50e9-c2ad-43d7-acc1-19b1b3b978b5/scratchpad/pwtest/**)",
-      "Bash(node test.js)"
+      "Bash(node test.js)",
+      "Bash(awk '{ print length, NR }' index.html)",
+      "Bash(awk 'NR==403{print substr\\($0,1,200\\); print \"...LEN=\"length\\($0\\)} NR==408{print substr\\($0,1,200\\); print \"...LEN=\"length\\($0\\)}' index.html)",
+      "Bash(perl -v)",
+      "Bash(perl -i -pe ' *)",
+      "Bash(perl -i -ne 'if\\($prev_b64 && /^\\\\s*$/\\){$prev_b64=0; next} print; $prev_b64 = \\(/base64/\\) ? 1 : 0;' main.html)",
+      "Bash(awk 'NR>=275 && NR<=290 { if\\(length\\($0\\)>300\\){print NR\": [LONG LINE len=\"length\\($0\\)\"]\"} else {print NR\": \"$0} }' main.html)"
     ]
   }
 }

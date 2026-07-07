@@ -165,6 +165,29 @@
   }
   .prop-val.fill::before{content:"✏️ "; font-style:normal;}
 
+  /* ---------- data tables ---------- */
+  h3.sub-title{
+    font-size:16px; font-weight:700; margin:26px 0 12px; display:flex; align-items:center; gap:8px;
+  }
+  .table-wrap{
+    overflow-x:auto; border:1px solid var(--border); border-radius:10px;
+    margin-bottom:22px; background:var(--page);
+  }
+  table.grid{ width:100%; border-collapse:collapse; font-size:13.5px; min-width:760px; }
+  table.grid th{
+    background:var(--gray-bg); color:var(--text-2); font-weight:600; text-align:left;
+    padding:10px 12px; border-bottom:1px solid var(--border-strong); white-space:nowrap;
+  }
+  table.grid td{
+    padding:10px 12px; border-bottom:1px solid var(--border); border-right:1px solid var(--border);
+    vertical-align:top; color:var(--text);
+  }
+  table.grid th:last-child, table.grid td:last-child{ border-right:none; }
+  table.grid tr:last-child td{ border-bottom:none; }
+  table.grid td.cat{ font-weight:700; color:var(--text); white-space:nowrap; }
+  table.grid td.center{ text-align:center; white-space:nowrap; }
+  table.grid tr.sum td{ background:var(--gray-bg); font-weight:700; }
+
   /* ---------- bullets ---------- */
   ul.notion-list{list-style:none; margin:0 0 14px; padding:0;}
   ul.notion-list li{
@@ -284,6 +307,7 @@
       <li><a href="#sec4">현장 소통 및 비상 연락 체계</a></li>
       <li><a href="#sec5">AI 체험 부스 스탭 서비스 가이드 (★가장 중요)</a></li>
       <li><a href="#sec6">참고사항 — 부스 위치 안내</a></li>
+      <li><a href="#sec7">인력투입 계획 — 세션별 기기 및 인력 배치</a></li>
     </ol>
   </div>
 
@@ -463,6 +487,68 @@
             </div>
           </div>
         </div>
+      </div>
+    </details>
+  </section>
+
+  <hr class="div">
+
+  <!-- SECTION 7 -->
+  <section id="sec7">
+    <details class="block" open>
+      <summary>
+        <span class="tri">▶</span>
+        <h2 class="sec-title"><span class="sec-emoji">🚩</span> 인력투입 계획 — 세션별 기기 및 인력 배치</h2>
+      </summary>
+      <div class="sec-body">
+
+        <div class="table-wrap">
+          <table class="grid">
+            <thead>
+              <tr>
+                <th>세션명</th>
+                <th>기기 수</th>
+                <th>배치 기준 및 역할</th>
+                <th>책임마스터</th>
+                <th>마스터</th>
+                <th>베이직</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cat">이력서 생성(OCR)</td>
+                <td class="center">10대</td>
+                <td>기기 2대당 1명 배치 (생성 AI 툴 조작 보조 및 작성 안내)</td>
+                <td class="center">권여진</td>
+                <td class="center">김상호</td>
+                <td>이민아, 정현아, 이지은, 장유리</td>
+              </tr>
+              <tr>
+                <td class="cat">증명사진 생성</td>
+                <td class="center">2대</td>
+                <td>기기 2대당 1명 배치 (사진 촬영 보조 및 생성 툴 조작 안내)</td>
+                <td class="center">이수현</td>
+                <td class="center">양인희</td>
+                <td>김성경, 김한결</td>
+              </tr>
+              <tr>
+                <td class="cat">참여기업 검색</td>
+                <td class="center">4대</td>
+                <td>세션당 1명 배치 (자율 검색 기기 안내 및 로테이션 관리)</td>
+                <td class="center">-</td>
+                <td class="center">-</td>
+                <td class="center">-</td>
+              </tr>
+              <tr class="sum">
+                <td class="cat">합계</td>
+                <td class="center">16대</td>
+                <td>현장 변동 가능성 있음</td>
+                <td class="center" colspan="3">총책 김화영</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
       </div>
     </details>
   </section>
